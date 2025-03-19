@@ -8,20 +8,21 @@ package com.mycompany.sistemamercadobasico;
  *
  * @author anajl
  */
-class Produto {
-    public String nomeProduto;
-    public float preco;
-    
-    public Produto(String nomeProduto, float preco){
-        this.nomeProduto = nomeProduto;
+public class Produto {
+    private String nome;
+    private double preco;
+
+    public Produto(String nome, double preco) {
+        this.nome = nome;
         this.preco = preco;
     }
-    
+
     public String getNome() {
-        return nomeProduto;
+        return nome;
     }
 
-    public float getPreco() {
+    public double getPreco() {
         return preco;
     }
 }
+

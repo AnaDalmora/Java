@@ -1,3 +1,7 @@
-com\mycompany\sistemamercadobasico\SistemaMercadoBasico.class
-com\mycompany\sistemamercadobasico\Produto.class
 com\mycompany\sistemamercadobasico\Pedido.class
+com\mycompany\sistemamercadobasico\Pagamento.class
+com\mycompany\sistemamercadobasico\Produto.class
+com\mycompany\sistemamercadobasico\ProdutoOperacao.class
+com\mycompany\sistemamercadobasico\SistemaMercadoBasico.class
+com\mycompany\sistemamercadobasico\PedidoPagamento.class
+com\mycompany\sistemamercadobasico\Operacao.class

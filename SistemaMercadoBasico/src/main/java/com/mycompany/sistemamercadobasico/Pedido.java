@@ -1,39 +1,32 @@
 package com.mycompany.sistemamercadobasico;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  * @author anajl
  */
-class Pedido {
-    
-    public int numeroPedido;
-    public List<Produto> itens;
-    
-    public Pedido(int numeroPedido){
-        this.numeroPedido = numeroPedido;
-        this.itens = new ArrayList<>();
+import java.util.List;
+
+public class Pedido {
+    private final List<Produto> produtos;
+
+    public Pedido(List<Produto> produtos) {
+        this.produtos = produtos;
     }
-    public void adicionarItem(Produto produto){
-        this.itens.add(produto);
-    }
-    
-    public void exibirPedido(){
-        System.out.println("Pedido #"+this.numeroPedido);
-        System.out.println("Itens pedidos:");
-        for (Produto produto : itens){
-            System.out.println("- "+ produto.nomeProduto + " R$ "+ produto.preco );
-        }
-        System.out.println("Valor total da compra: "+ totalPedido());
-    }
-    public float totalPedido(){
-        float total =0;
-        
-        for(Produto produto : itens){
-            total += produto.preco;
+
+    public double calcularTotal() {
+        double total = 0;
+        for (Produto produto : produtos) {
+            total += produto.getPreco();
         }
         return total;
     }
+
+    public void mostrarPedido() {
+        for (Produto produto : produtos) {
+            System.out.println(produto.getNome() + " - R$ " + produto.getPreco());
+        }
+    }
 }
+
